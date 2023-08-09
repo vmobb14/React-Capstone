@@ -1,0 +1,15 @@
+@import url(./variables.scss);
+@import url(./mixins.scss);
+
+#root {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  background-color: aqua;
+
+  .app-body {
+    .navbar-body {
+      background-color: orangered;
+    }
+  }
+}
