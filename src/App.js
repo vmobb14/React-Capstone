@@ -7,6 +7,7 @@ import Cart from "./components/pages/Cart";
 import Contact from "./components/pages/Contact";
 import Products from "./components/pages/Products";
 import SingleProduct from "./components/pages/SingleProduct";
+import NotFound from "./components/pages/NotFound";
 import "./styles/app.scss";
 
 export default function App() {
@@ -16,11 +17,12 @@ export default function App() {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/cart" component={Cart} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/products" component={Products} />
-          <Route exact path="/product/:slug" component={SingleProduct} />
+          <Route path="/about" component={About} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/products" component={Products} />
+          <Route path="/product/:slug" component={SingleProduct} />
+          <NotFound />
         </Switch>
       </Router>
     </div>

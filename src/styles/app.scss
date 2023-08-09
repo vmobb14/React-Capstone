@@ -1,15 +1,18 @@
 @import url(./variables.scss);
 @import url(./mixins.scss);
 
+@import url(./components/nav/nav-bar.scss);
+@import url(./components/pages/home.scss);
+@import url(./components/pages/about.scss);
+@import url(./components/pages/cart.scss);
+@import url(./components/pages/contact.scss);
+@import url(./components/pages/products.scss);
+@import url(./components/pages/single-product.scss);
+@import url(./components/item-card.scss);
+
 #root {
   margin: 0px;
   padding: 0px;
   width: 100vw;
-  background-color: aqua;
-
-  .app-body {
-    .navbar-body {
-      background-color: orangered;
-    }
-  }
+  background-color: orangered;
 }
