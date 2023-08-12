@@ -1,0 +1,47 @@
+.navbar-body {
+  margin: 0px;
+  padding: 0px;
+  height: 125px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+
+  .navbar-title-wrapper {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    font-family: "Tilt Prism", cursive;
+    background-color: greenyellow;
+
+    h1 {
+      margin: 10px 0px;
+    }
+
+    p {
+      margin: 15px 0px;
+    }
+  }
+
+  .navbar-links-wrapper {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .active {
+      color: greenyellow;
+      text-decoration: underline;
+    }
+  }
+}

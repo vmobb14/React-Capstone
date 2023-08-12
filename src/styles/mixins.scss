@@ -1,13 +1,13 @@
-@mixin flexDefaults($flexDirection, $flexAlign, $flexJustify) {
-  display: flex;
-  flex-direction: $flexDirection;
-  align-items: $flexAlign;
-  justify-content: $flexJustify;
-}
-
 @mixin dimensionDefaults($margin, $padding, $height, $width) {
   margin: $margin;
   padding: $padding;
   height: $height;
   width: $width;
+}
+
+@mixin flexDefaults($flexDirection, $flexAlign, $flexJustify) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: $flexAlign;
+  justify-content: $flexJustify;
 }

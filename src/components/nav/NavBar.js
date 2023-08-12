@@ -2,9 +2,10 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <div className="nav-bar-body">
+    <div className="navbar-body">
       <div className="navbar-title-wrapper">
-        <p>Website Title</p>
+        <h1>G</h1>
+        <p>Gilroy's Grocers</p>
       </div>
       <div className="navbar-links-wrapper">
         <NavLink exact to="/">

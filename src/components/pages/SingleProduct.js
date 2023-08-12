@@ -1,3 +1,3 @@
 export default function SingleProduct() {
-  return <div className="product-body"></div>;
+  return <div className="product-body">Single Product</div>;
 }
