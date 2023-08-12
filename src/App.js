@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import NavBar from "./components/nav/NavBar";
+import Footer from "./components/nav/Footer";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Cart from "./components/pages/Cart";
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/product/:slug" component={SingleProduct} />
           <NotFound />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

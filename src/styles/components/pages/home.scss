@@ -1,0 +1,47 @@
+.home-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .home-intro-header {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      margin: 0px;
+      margin-top: 35px;
+      font-size: 40px;
+      background-color: white;
+      border-radius: 15px;
+    }
+
+    h1 {
+      margin: 25px 0px;
+      font-family: "Tilt Prism", cursive;
+      font-size: 75px;
+      background-color: white;
+      border-radius: 15px;
+    }
+  }
+
+  .home-intro-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+
+    p {
+      margin: 0px;
+      padding: 30px;
+      width: 750px;
+    }
+  }
+}

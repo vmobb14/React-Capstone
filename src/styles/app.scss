@@ -2,6 +2,7 @@
 @import url(./mixins.scss);
 
 @import url(./components/nav/nav-bar.scss);
+@import url(./components/nav/footer.scss);
 @import url(./components/pages/home.scss);
 @import url(./components/pages/about.scss);
 @import url(./components/pages/cart.scss);
@@ -13,6 +14,12 @@
 #root {
   margin: 0px;
   padding: 0px;
+  height: calc(100vh - 110px);
   width: 100vw;
-  background-color: grey;
+
+  .app-body {
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+  }
 }
