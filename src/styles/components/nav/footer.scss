@@ -7,9 +7,21 @@
   color: white;
   background-color: black;
 
-  p {
-    margin: 0px;
-    padding: 2px 0px;
-    font-size: 0.9rem;
+  .address-wrapper {
+    p {
+      margin: 0px;
+      padding: 2px 0px;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+  }
+
+  .contact-wrapper {
+    p {
+      margin: 0px;
+      padding: 2px 0px;
+      font-size: 0.9rem;
+      text-align: right;
+    }
   }
 }
