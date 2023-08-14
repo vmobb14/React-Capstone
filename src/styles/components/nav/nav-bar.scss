@@ -1,4 +1,6 @@
 .navbar-body {
+  position: fixed;
+  z-index: 1;
   margin: 0px;
   padding: 0px;
   height: 110px;
@@ -10,7 +12,7 @@
 
   .navbar-title-wrapper {
     height: 100%;
-    width: 200px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,11 +21,16 @@
     background-color: greenyellow;
 
     h1 {
-      margin: 10px 0px;
+      margin: 0px;
+      font-size: 2.5rem;
     }
 
     p {
-      margin: 15px 0px;
+      margin: 0px;
+      margin-bottom: 15px;
+      width: min-content;
+      font-size: 1rem;
+      text-align: center;
     }
   }
 
@@ -37,11 +44,15 @@
     a {
       color: white;
       text-decoration: none;
+      font-size: 1rem;
+      font-weight: 200;
     }
 
     .active {
       color: greenyellow;
       text-decoration: underline;
+      font-size: 1.1rem;
+      font-weight: 700;
     }
   }
 }
