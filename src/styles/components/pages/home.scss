@@ -1,5 +1,6 @@
 .home-body {
-  height: calc(100% - 191.5px);
+  height: auto;
+  min-height: calc(100vh - 191.5px);
   width: 100%;
   padding-top: 110px;
   display: flex;

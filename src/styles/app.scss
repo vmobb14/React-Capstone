@@ -14,11 +14,13 @@
 #root {
   margin: 0px;
   padding: 0px;
-  height: 100vh;
+  height: auto;
+  min-height: calc(100vh - 191.5px);
   width: 100vw;
 
   .app-body {
-    height: 100%;
+    height: auto;
+    min-height: calc(100vh - 191.5px);
     width: 100%;
   }
 }
