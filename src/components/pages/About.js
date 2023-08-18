@@ -31,7 +31,7 @@ export default function About() {
           a. Phasellus ac erat vitae justo pulvinar venenatis.
         </p>
         <h3>My Favorites</h3>
-        <p>
+        <p className="final-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
           mauris eget felis vehicula fermentum at ut velit. Aenean euismod
           finibus lorem. Proin scelerisque dolor at lectus interdum ultricies.
