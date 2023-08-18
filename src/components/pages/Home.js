@@ -10,8 +10,8 @@ export default function Home() {
           Welcome to my React.js Capstone website. My name is Tyler Gilroy, and
           this project bears the results of my blood, sweat, and (many) tears.
           Is it perfect? Absolutely not, but seven months prior to my creation
-          of this website, I had exactly zero knowledge of software development.
-          Now, I can single-handedly build enitre projects such as this.
+          of this website I had exactly zero knowledge of software development.
+          Now, I can single-handedly build enitre sites such as this.
         </p>
       </div>
     </div>
