@@ -46,6 +46,7 @@ export default function App() {
               <SingleProduct
                 {...routeProps}
                 products={products}
+                cart={cart}
                 setCart={setCart}
               />
             )}
