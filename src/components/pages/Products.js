@@ -3,9 +3,7 @@
 import { Link } from "react-router-dom";
 
 export default function Products(props) {
-  console.log(props);
-
-  function renderProducts() {
+  const renderProducts = () => {
     return props.products.map((product) => {
       return (
         <div key={product.id} className="product-card">
@@ -20,7 +18,7 @@ export default function Products(props) {
         </div>
       );
     });
-  }
+  };
 
   return <div className="products-body">{renderProducts()}</div>;
 }

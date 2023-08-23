@@ -13,13 +13,27 @@ export default function SingleProduct(props) {
       .then((data) => setProductData(data));
 
     return () => controller.abort();
-  }, []);
+  }, [url]);
 
-  console.log(productData);
+  const renderProduct = (productData) => {
+    return (
+      <div className="product-card">
+        <p className="title">{productData.title}</p>
+        <img src={productData.image} alt="Product Placeholder" />
+        <div className="product-info">
+          <button>Add to cart</button>
+          <p>Price: ${productData.price?.toFixed(2)}</p>
+          <p>Rating: {productData.rating?.rate} / 5</p>
+          <p>Reviews: {productData.rating?.count}</p>
+        </div>
+        <p className="description">{productData.description}</p>
+      </div>
+    );
+  };
 
   return (
     <div className="product-body">
-      <div className="product-content">Product Please</div>
+      <div className="product-content">{renderProduct(productData)}</div>
     </div>
   );
 }

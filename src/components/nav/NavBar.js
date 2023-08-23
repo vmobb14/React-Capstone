@@ -11,10 +11,10 @@ export default function NavBar() {
         <NavLink exact to="/">
           Home
         </NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/cart">Cart</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/products">Products</NavLink>
+        <NavLink to="/cart">Cart</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </div>
     </div>
   );
