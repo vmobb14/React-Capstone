@@ -17,9 +17,13 @@ export default function App() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
+    const controller = new AbortController();
+
     fetch("https://fakestoreapi.com/products")
       .then((result) => result.json())
       .then((data) => setProducts(data));
+
+    return () => controller.abort();
   }, []);
 
   return (

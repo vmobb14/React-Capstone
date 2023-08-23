@@ -15,7 +15,7 @@ export default function Products(props) {
           <p>{product.title}</p>
           <div className="card-info">
             <p>${product.price.toFixed(2)}</p>
-            <p>{product.rating.rate}</p>
+            <p>Stars: {product.rating.rate}</p>
           </div>
         </div>
       );

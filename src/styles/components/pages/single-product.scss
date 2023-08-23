@@ -1,0 +1,25 @@
+.product-body {
+  height: auto;
+  min-height: calc(100vh - 191.5px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(https://source.unsplash.com/random?grocery-store);
+  background-size: cover;
+
+  .product-content {
+    padding-top: 110px;
+    height: auto;
+    min-height: calc(100vh - 191.5px);
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4d4d4;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+}
