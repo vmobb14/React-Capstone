@@ -47,12 +47,7 @@ export default function App() {
           <Route
             path="/product/:slug"
             render={(routeProps) => (
-              <SingleProduct
-                {...routeProps}
-                products={products}
-                cart={cart}
-                setCart={setCart}
-              />
+              <SingleProduct {...routeProps} cart={cart} setCart={setCart} />
             )}
           />
           <NotFound />

@@ -1,5 +1,5 @@
 export default function Cart(props) {
-  console.log(props);
+  // console.log(props);
 
   return (
     <div className="cart-body">

@@ -1,8 +1,8 @@
-// `${product.id}, ${product.title}, ${product.price}, ${product.description}, ${product.category}, ${product.image}, ${product.rating.rate}, ${product.rating.count}`
 import { useEffect, useState } from "react";
 
 export default function SingleProduct(props) {
   const [productData, setProductData] = useState({});
+  const setCart = props.setCart;
   const url = `https://fakestoreapi.com/products/${props.match.params.slug}`;
 
   useEffect(() => {
@@ -15,13 +15,19 @@ export default function SingleProduct(props) {
     return () => controller.abort();
   }, [url]);
 
+  const addToCart = () => {
+    return props.cart.includes(productData.id)
+      ? console.log(props.cart)
+      : setCart((prevState) => [...prevState, productData.id]);
+  };
+
   const renderProduct = (productData) => {
     return (
       <div className="product-card">
         <p className="title">{productData.title}</p>
         <img src={productData.image} alt="Product Placeholder" />
         <div className="product-info">
-          <button>Add to cart</button>
+          <button onClick={addToCart}>Add to cart</button>
           <p>Price: ${productData.price?.toFixed(2)}</p>
           <p>Rating: {productData.rating?.rate} / 5</p>
           <p>Reviews: {productData.rating?.count}</p>
