@@ -17,7 +17,7 @@ export default function SingleProduct(props) {
 
   const addToCart = () => {
     return props.cart.includes(productData.id)
-      ? console.log(props.cart)
+      ? null
       : setCart((prevState) => [...prevState, productData.id]);
   };
 
@@ -27,7 +27,9 @@ export default function SingleProduct(props) {
         <p className="title">{productData.title}</p>
         <img src={productData.image} alt="Product Placeholder" />
         <div className="product-info">
-          <button onClick={addToCart}>Add to cart</button>
+          <button onClick={addToCart}>
+            {props.cart.includes(productData.id) ? "In cart!" : "Add to cart"}
+          </button>
           <p>Price: ${productData.price?.toFixed(2)}</p>
           <p>Rating: {productData.rating?.rate} / 5</p>
           <p>Reviews: {productData.rating?.count}</p>
