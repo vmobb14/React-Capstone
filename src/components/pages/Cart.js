@@ -9,10 +9,6 @@ export default function Cart(props) {
   };
 
   function renderItem(productData) {
-    console.log(productData.image);
-    console.log(productData.title);
-    console.log(productData.price);
-    console.log(productData.rating.rate);
     return (
       <div className="product-card" key={productData.id}>
         <img src={productData.image} alt="Product Placeholder" />
