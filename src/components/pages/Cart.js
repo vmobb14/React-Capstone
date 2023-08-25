@@ -1,16 +1,21 @@
 export default function Cart(props) {
   const setCart = props.setCart;
+  const renderedItems = [];
 
   const renderCart = () => {
     return props.cart.map((productID) => {
       const productData = props.products.find(
         (stock) => stock.id === productID
       );
-      return productData ? renderItem(productData) : null;
+      return renderedItems.includes(productData.id)
+        ? null
+        : renderItem(productData);
     });
   };
 
   function renderItem(productData) {
+    renderedItems.push(productData.id);
+
     const productQuantity = props.cart.filter((cartID) => {
       return productData.id === cartID;
     }).length;
