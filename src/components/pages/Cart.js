@@ -24,7 +24,6 @@ export default function Cart(props) {
 
     const addQuantity = (productData) => {
       setCart((prevState) => [...prevState, productData.id]);
-      console.log(productQuantity);
     };
 
     const subtractQuantity = (productData) => {

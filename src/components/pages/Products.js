@@ -1,5 +1,3 @@
-// `${product.id}, ${product.title}, ${product.price}, ${product.description}, ${product.category}, ${product.image}, ${product.rating.rate}, ${product.rating.count}`
-
 import { Link } from "react-router-dom";
 
 export default function Products(props) {
