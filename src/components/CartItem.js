@@ -1,31 +1,59 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function CartItem(props) {
   const productData = props.productData;
   const setCart = props.setCart;
-  const [productQuantity, setProductQuantity] = useState(1);
+  const [quantityState, setQuantityState] = useState(1);
   const [productCost, setProductCost] = useState(productData.price.toFixed(2));
 
-  const updateCost = () =>
-    setProductCost((productQuantity * productData.price).toFixed(2));
+  useEffect(() => {
+    setQuantityState(
+      props.cart.filter((cartID) => {
+        return productData.id === cartID;
+      }).length
+    );
 
-  const addQuantity = () => {
-    setProductQuantity((prevState) => prevState + 1);
-    updateCost();
+    setProductCost((quantityState * productData.price).toFixed(2));
+  }, [props.cart]);
+
+  const addQuantity = (productData) => {
+    setCart((prevState) => [...prevState, productData.id]);
+    console.log(productQuantity);
   };
 
-  const subtractQuantity = () => {
+  const subtractQuantity = (productData) => {
     if (productQuantity > 1) {
-      setProductQuantity((prevState) => prevState - 1);
-      updateCost();
+      const removeIndex = props.cart.indexOf(productData.id);
+      setCart((prevState) => prevState.splice(removeIndex, 1));
+      console.log(productQuantity);
     }
   };
 
   const removeAllQuantity = (productData) => {
     const removeIndex = props.cart.indexOf(productData.id);
-    setProductQuantity(0);
-    setCart((prevState) => prevState.splice(removeIndex, 1));
+    setCart((prevState) => prevState.splice(removeIndex, productQuantity));
   };
+
+  // const updateCost = () =>
+  //   setProductCost((productQuantity * productData.price).toFixed(2));
+
+  // const addQuantity = () => {
+  //   setProductQuantity((prevState) => prevState + 1);
+  //   updateCost();
+  // };
+
+  // const subtractQuantity = () => {
+  //   if (productQuantity > 1) {
+  //     setProductQuantity((prevState) => prevState - 1);
+  //     updateCost();
+  //   }
+  // };
+
+  // const removeAllQuantity = (productData) => {
+  //   const removeIndex = props.cart.indexOf(productData.id);
+  //   setProductQuantity(0);
+  //   setCart((prevState) => prevState.splice(removeIndex, 1));
+  // };
 
   return (
     <div className="product-card" key={productData.id}>

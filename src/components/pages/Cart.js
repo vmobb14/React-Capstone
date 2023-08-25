@@ -25,14 +25,17 @@ export default function Cart(props) {
     const subtractQuantity = (productData) => {
       if (productQuantity > 1) {
         const removeIndex = props.cart.indexOf(productData.id);
-        setCart((prevState) => prevState.splice(removeIndex, 1));
-        console.log(productQuantity);
+        const updatedCart = [...props.cart];
+        updatedCart.splice(removeIndex, 1);
+        setCart(updatedCart);
       }
     };
 
     const removeAllQuantity = (productData) => {
       const removeIndex = props.cart.indexOf(productData.id);
-      setCart((prevState) => prevState.splice(removeIndex, productQuantity));
+      const updatedCart = [...props.cart];
+      updatedCart.splice(removeIndex, productQuantity);
+      setCart(updatedCart);
     };
 
     return (
@@ -44,9 +47,9 @@ export default function Cart(props) {
           <p>${productTotal}</p>
         </div>
         <div className="quantity-control">
-          <button onClick={addQuantity}>+</button>
-          <button onClick={subtractQuantity}>-</button>
-          <button onClick={removeAllQuantity}>Remove</button>
+          <button onClick={() => addQuantity(productData)}>+</button>
+          <button onClick={() => subtractQuantity(productData)}>-</button>
+          <button onClick={() => removeAllQuantity(productData)}>Remove</button>
         </div>
       </div>
     );
